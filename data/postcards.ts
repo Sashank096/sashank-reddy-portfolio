@@ -4,6 +4,7 @@ export type PostcardAlbum = {
   title: string;
   photos: number;
   image?: string;
+  images?: { src: string; alt: string }[];
   theme: string;
 };
 

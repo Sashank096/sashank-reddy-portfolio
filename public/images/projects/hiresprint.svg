@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" fill="none">
+  <defs>
+    <linearGradient id="background" x1="30" y1="0" x2="1120" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#11152B"/>
+      <stop offset="1" stop-color="#242052"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8B7BFF"/>
+      <stop offset="1" stop-color="#35D6CA"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#252A48"/>
+      <stop offset="1" stop-color="#1A203B"/>
+    </linearGradient>
+    <filter id="shadow" x="235" y="58" width="906" height="484" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="18"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.02 0 0 0 0 0.02 0 0 0 0 0.09 0 0 0 0.45 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#A9A7D8" fill-opacity=".18"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="560" rx="28" fill="url(#background)"/>
+  <circle cx="1065" cy="86" r="194" fill="#6554DF" fill-opacity=".13"/>
+  <circle cx="1055" cy="480" r="220" fill="#30CFC2" fill-opacity=".08"/>
+  <path d="M0 400C185 317 259 461 438 391s252-115 405-25 225 56 357-30v224H0V400Z" fill="url(#dots)"/>
+  <g opacity=".9">
+    <path d="M77 164h102" stroke="#7669F2" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="77" cy="164" r="4" fill="#38D3C6"/>
+    <text x="77" y="211" fill="#B5B8D7" font-family="Inter,Segoe UI,sans-serif" font-size="12" font-weight="700" letter-spacing="2.4">CAREER MOMENTUM</text>
+    <text x="75" y="261" fill="#FFF" font-family="Inter,Segoe UI,sans-serif" font-size="43" font-weight="750">Make your</text>
+    <text x="75" y="309" fill="#FFF" font-family="Inter,Segoe UI,sans-serif" font-size="43" font-weight="750">next move</text>
+    <text x="75" y="357" fill="url(#accent)" font-family="Inter,Segoe UI,sans-serif" font-size="43" font-weight="750">count.</text>
+    <text x="78" y="399" fill="#B8BDD8" font-family="Inter,Segoe UI,sans-serif" font-size="14">Find the fit. Build your story. Keep moving.</text>
+    <rect x="77" y="431" width="137" height="38" rx="10" fill="url(#accent)"/>
+    <text x="98" y="455" fill="#10152D" font-family="Inter,Segoe UI,sans-serif" font-size="12" font-weight="700">A clearer job search</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="292" y="81" width="778" height="400" rx="18" fill="#F8F9FF"/>
+    <path d="M310 81h742a18 18 0 0 1 18 18v39H292V99a18 18 0 0 1 18-18Z" fill="#FFF"/>
+    <circle cx="318" cy="105" r="4" fill="#FF7187"/>
+    <circle cx="333" cy="105" r="4" fill="#FFC85B"/>
+    <circle cx="348" cy="105" r="4" fill="#47D7B3"/>
+    <rect x="390" y="95" width="180" height="20" rx="7" fill="#F1F1FA"/>
+    <text x="404" y="109" fill="#777B98" font-family="Inter,Segoe UI,sans-serif" font-size="8">app.hiresprint.com</text>
+    <rect x="292" y="138" width="157" height="343" fill="#171B32"/>
+    <path d="M316 167h16l8 8-8 8h-16l8-8-8-8Z" fill="url(#accent)"/>
+    <text x="348" y="181" fill="#FFF" font-family="Inter,Segoe UI,sans-serif" font-size="13" font-weight="700">HireSprint</text>
+    <rect x="306" y="205" width="129" height="29" rx="8" fill="#303655"/>
+    <circle cx="322" cy="220" r="5" stroke="#9D93FF" stroke-width="1.5"/>
+    <text x="336" y="223" fill="#FFF" font-family="Inter,Segoe UI,sans-serif" font-size="9" font-weight="600">Dashboard</text>
+    <circle cx="322" cy="255" r="5" stroke="#8E94B6" stroke-width="1.5"/>
+    <text x="336" y="258" fill="#A8ADC9" font-family="Inter,Segoe UI,sans-serif" font-size="9">Find jobs</text>
+    <rect x="317" y="280" width="10" height="10" rx="2" stroke="#8E94B6" stroke-width="1.5"/>
+    <text x="336" y="289" fill="#A8ADC9" font-family="Inter,Segoe UI,sans-serif" font-size="9">Applications</text>
+    <path d="M318 316h9v10h-9z" stroke="#8E94B6" stroke-width="1.5"/>
+    <text x="336" y="324" fill="#A8ADC9" font-family="Inter,Segoe UI,sans-serif" font-size="9">Resumes</text>
+    <path d="M319 351h8m-8 4h8m-8 4h5" stroke="#8E94B6" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="336" y="359" fill="#A8ADC9" font-family="Inter,Segoe UI,sans-serif" font-size="9">Skill Developer</text>
+    <circle cx="319" cy="393" r="5" stroke="#8E94B6" stroke-width="1.5"/>
+    <path d="M319 391v3l2 1" stroke="#8E94B6" stroke-width="1"/>
+    <text x="336" y="396" fill="#A8ADC9" font-family="Inter,Segoe UI,sans-serif" font-size="9">Analytics</text>
+    <circle cx="320" cy="447" r="15" fill="#45466E"/>
+    <text x="311" y="450" fill="#FFF" font-family="Inter,Segoe UI,sans-serif" font-size="8" font-weight="700">SS</text>
+    <text x="341" y="445" fill="#FFF" font-family="Inter,Segoe UI,sans-serif" font-size="8" font-weight="600">Your workspace</text>
+    <text x="341" y="457" fill="#9298B7" font-family="Inter,Segoe UI,sans-serif" font-size="7">Profile ready</text>
+    <text x="472" y="172" fill="#252946" font-family="Inter,Segoe UI,sans-serif" font-size="17" font-weight="700">Good morning. Keep your momentum.</text>
+    <text x="472" y="190" fill="#81859C" font-family="Inter,Segoe UI,sans-serif" font-size="9">Your job search at a glance.</text>
+    <rect x="472" y="207" width="132" height="66" rx="10" fill="#FFF" stroke="#E8E9F1"/>
+    <rect x="615" y="207" width="132" height="66" rx="10" fill="#FFF" stroke="#E8E9F1"/>
+    <rect x="758" y="207" width="132" height="66" rx="10" fill="#FFF" stroke="#E8E9F1"/>
+    <rect x="901" y="207" width="132" height="66" rx="10" fill="#FFF" stroke="#E8E9F1"/>
+    <text x="486" y="227" fill="#8589A0" font-family="Inter,Segoe UI,sans-serif" font-size="8">Applications</text>
+    <text x="486" y="253" fill="#252946" font-family="Inter,Segoe UI,sans-serif" font-size="23" font-weight="700">12</text>
+    <text x="629" y="227" fill="#8589A0" font-family="Inter,Segoe UI,sans-serif" font-size="8">Matched</text>
+    <text x="629" y="253" fill="#252946" font-family="Inter,Segoe UI,sans-serif" font-size="23" font-weight="700">08</text>
+    <text x="772" y="227" fill="#8589A0" font-family="Inter,Segoe UI,sans-serif" font-size="8">Interviews</text>
+    <text x="772" y="253" fill="#252946" font-family="Inter,Segoe UI,sans-serif" font-size="23" font-weight="700">03</text>
+    <text x="915" y="227" fill="#8589A0" font-family="Inter,Segoe UI,sans-serif" font-size="8">Offers</text>
+    <text x="915" y="253" fill="#252946" font-family="Inter,Segoe UI,sans-serif" font-size="23" font-weight="700">01</text>
+    <rect x="472" y="290" width="352" height="168" rx="11" fill="#FFF" stroke="#E8E9F1"/>
+    <text x="488" y="312" fill="#252946" font-family="Inter,Segoe UI,sans-serif" font-size="10" font-weight="700">Application pipeline</text>
+    <text x="488" y="330" fill="#8589A0" font-family="Inter,Segoe UI,sans-serif" font-size="7">Your progress, one step at a time</text>
+    <path d="M495 415h70v-22h70v-33h70v-20h70" stroke="url(#accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="495" cy="415" r="4" fill="#8374F6"/>
+    <circle cx="565" cy="393" r="4" fill="#8374F6"/>
+    <circle cx="635" cy="360" r="4" fill="#5FADE4"/>
+    <circle cx="705" cy="340" r="4" fill="#35D2C5"/>
+    <text x="489" y="438" fill="#898DA2" font-family="Inter,Segoe UI,sans-serif" font-size="7">Discovered</text>
+    <text x="555" y="438" fill="#898DA2" font-family="Inter,Segoe UI,sans-serif" font-size="7">Applied</text>
+    <text x="626" y="438" fill="#898DA2" font-family="Inter,Segoe UI,sans-serif" font-size="7">Interview</text>
+    <text x="699" y="438" fill="#898DA2" font-family="Inter,Segoe UI,sans-serif" font-size="7">Offer</text>
+    <rect x="836" y="290" width="197" height="168" rx="11" fill="url(#card)"/>
+    <text x="852" y="313" fill="#FFF" font-family="Inter,Segoe UI,sans-serif" font-size="10" font-weight="700">Top job match</text>
+    <rect x="852" y="328" width="164" height="47" rx="8" fill="#343A5B"/>
+    <circle cx="870" cy="351" r="11" fill="#8172F7"/>
+    <text x="866" y="354" fill="#FFF" font-family="Inter,Segoe UI,sans-serif" font-size="8" font-weight="700">N</text>
+    <text x="888" y="347" fill="#FFF" font-family="Inter,Segoe UI,sans-serif" font-size="8" font-weight="600">Product Engineer</text>
+    <text x="888" y="360" fill="#AFB4D0" font-family="Inter,Segoe UI,sans-serif" font-size="7">Northstar Labs · Remote</text>
+    <text x="852" y="400" fill="#AEB3CD" font-family="Inter,Segoe UI,sans-serif" font-size="8">Skills match</text>
+    <text x="977" y="400" fill="#40D7C8" font-family="Inter,Segoe UI,sans-serif" font-size="9" font-weight="700">86%</text>
+    <rect x="852" y="411" width="164" height="5" rx="2.5" fill="#414765"/>
+    <rect x="852" y="411" width="137" height="5" rx="2.5" fill="url(#accent)"/>
+    <text x="852" y="440" fill="#C5C9DF" font-family="Inter,Segoe UI,sans-serif" font-size="7">Review skills and take your next step →</text>
+  </g>
+  <text x="292" y="521" fill="#9DA3C6" font-family="Inter,Segoe UI,sans-serif" font-size="9">PROFILE  ·  JOB MATCHES  ·  PREPARATION  ·  PROGRESS</text>
+</svg>

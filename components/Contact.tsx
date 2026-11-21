@@ -4,6 +4,7 @@ import { useState, type FormEvent, type ReactNode } from "react";
 import { site } from "@/data/site";
 import Card from "./ui/Card";
 import { LineIcon, type LineIconName } from "./ui/Icons";
+import SwarmBuild from "./SwarmBuild";
 
 type Status = { kind: "idle" } | { kind: "sending" } | { kind: "ok" } | { kind: "error"; msg: string };
 const meetingHref = `mailto:${site.email}?subject=Schedule%20a%20meeting`;
@@ -63,28 +64,13 @@ export default function Contact() {
 
   return (
     <>
-      <div className="contact-cards" aria-label="Contact options">
-        {contacts.map((contact) => (
-          <a
-            className="contact-card"
-            href={contact.href}
-            key={contact.label}
-            {...(contact.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-          >
-            <span className="contact-card-icon"><LineIcon name={contact.icon} /></span>
-            <span className="contact-card-copy">
-              <small>{contact.label}</small>
-              <strong>{contact.value}</strong>
-            </span>
-          </a>
-        ))}
-      </div>
-
-      <section className="contact-form-section">
-        <h2 className="display">Send a message</h2>
-        <p className="prose">Have a question or an opportunity in mind? Send a note and it will land in my inbox.</p>
-        <Card className="contact-form-card">
-          <form onSubmit={onSubmit} noValidate className="form">
+      <div className="contact-layout">
+        <section className="contact-form-section">
+          <h3 className="display">Send a message</h3>
+          <p className="prose">Have a question or an opportunity in mind? Send a note and it will land in my inbox.</p>
+          <Card className="contact-form-card">
+            <SwarmBuild label="" small />
+            <form onSubmit={onSubmit} noValidate className="form">
             <div className="hp" aria-hidden="true">
               <label>Leave this empty<input name="website" tabIndex={-1} autoComplete="off" /></label>
             </div>
@@ -110,13 +96,32 @@ export default function Contact() {
             <button className="btn" type="submit" disabled={sending}>
               {sending ? "Sending..." : "Send message"}
             </button>
-            <p className="form-status" role="status" aria-live="polite">
+            <p className={`form-status${status.kind === "ok" || status.kind === "error" ? " toast-visible" : ""}`} role="status" aria-live="polite">
               {status.kind === "ok" && "Message sent. I’ll reply to the email you entered."}
               {status.kind === "error" && status.msg}
             </p>
-          </form>
-        </Card>
-      </section>
+            </form>
+          </Card>
+        </section>
+        <div className="contact-cards" aria-label="Contact options">
+          {contacts.map((contact) => (
+            <a
+              className="contact-card"
+              href={contact.href}
+              key={contact.label}
+              {...(contact.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            >
+              <SwarmBuild label="" small />
+              <span className="contact-card-icon"><LineIcon name={contact.icon} /></span>
+              <span className="contact-card-copy">
+                <small>{contact.label}</small>
+                <strong>{contact.value}</strong>
+              </span>
+              <span className="contact-card-arrow" aria-hidden="true">↗</span>
+            </a>
+          ))}
+        </div>
+      </div>
     </>
   );
 }

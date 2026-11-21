@@ -1,10 +1,12 @@
 import { certifications, education, experience } from "@/data/experience";
 import Card from "./ui/Card";
+import SwarmBuild from "./SwarmBuild";
 
 export default function Experience() {
   return (
     <div className="two-col">
       <Card>
+        <SwarmBuild label="" small />
         <h2 className="display">Experience</h2>
         <ol className="timeline">
           {experience.map((x) => (
@@ -28,6 +30,7 @@ export default function Experience() {
         </ul>
       </Card>
       <Card>
+        <SwarmBuild label="" small />
         <h2 className="display">Education</h2>
         <ol className="timeline">
           <li>

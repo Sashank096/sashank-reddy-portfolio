@@ -1,23 +1,17 @@
 import { site } from "@/data/site";
-import Button from "./ui/Button";
 import Card from "./ui/Card";
+import SwarmBuild from "./SwarmBuild";
 
 export default function About() {
   return (
-    <Card>
-      <h2 className="display">About me</h2>
-      {site.about.map((p) => (
-        <p key={p} className="prose">{p}</p>
-      ))}
-      <ul className="facts">
-        <li>{site.city}, {site.state}</li>
-        <li>B.Tech AI &amp; ML, Aditya University</li>
-        <li>Infosys Springboard intern</li>
+    <Card className="about-copy">
+      <SwarmBuild label="" small />
+      <p className="section-eyebrow">A LITTLE CONTEXT</p>
+      <h3>Curious by nature.<br /><span>Builder by choice.</span></h3>
+      {site.about.map((p) => <p key={p} className="prose">{p}</p>)}
+      <ul className="about-chips" aria-label="Areas of focus">
+        {["Python", "JavaScript", "AI/ML", "Computer Vision", "Power BI", "Supabase"].map((item) => <li key={item}>{item}</li>)}
       </ul>
-      <div className="row-actions">
-        <Button href={site.resume} external>View resume</Button>
-        <Button href="/contact" variant="ghost">Get in touch</Button>
-      </div>
     </Card>
   );
 }

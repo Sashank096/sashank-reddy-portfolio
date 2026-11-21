@@ -13,6 +13,7 @@ export const site = {
   phoneDisplay: "+91 83418 36788",
   city: "Kakinada",
   state: "Andhra Pradesh, India",
+  url: "https://sashank-reddy-portfolio.vercel.app",
   github: "https://github.com/Sashank096",
   linkedin: "https://www.linkedin.com/in/sashankreddysathi",
   resume: "/resume.pdf",

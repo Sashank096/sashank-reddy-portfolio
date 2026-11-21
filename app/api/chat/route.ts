@@ -61,8 +61,8 @@ export async function POST(request: Request) {
     education,
     experience,
     certifications,
-    projects: projects.map(({ id, title, description, tags, category, github, live }) => ({
-      id, title, description, tags, category, github, live,
+    projects: projects.map(({ id, title, description, tags, category, codeUrl, liveUrl }) => ({
+      id, title, description, tags, category, github: codeUrl, live: liveUrl,
     })),
     skills: skillGroups,
   });

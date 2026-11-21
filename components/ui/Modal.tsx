@@ -7,10 +7,31 @@ type Props = { open: boolean; onClose: () => void; title: string; children: Reac
 
 export default function Modal({ open, onClose, title, children }: Props) {
   const closeRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!open) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+    const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const onKey = (e: globalThis.KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+        return;
+      }
+      if (e.key !== "Tab" || !dialogRef.current) return;
+      const focusable = dialogRef.current.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      );
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
     window.addEventListener("keydown", onKey);
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
@@ -18,6 +39,7 @@ export default function Modal({ open, onClose, title, children }: Props) {
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
+      previousFocus?.focus();
     };
   }, [open, onClose]);
 
@@ -25,6 +47,7 @@ export default function Modal({ open, onClose, title, children }: Props) {
   return (
     <div className="overlay" onMouseDown={onClose}>
       <div
+        ref={dialogRef}
         className="modal"
         role="dialog"
         aria-modal="true"

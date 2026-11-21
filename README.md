@@ -1,6 +1,6 @@
 # Sashank Reddy Sathi — Portfolio
 
-Next.js 15 (App Router) + TypeScript. Chat-first home page, light/dark theme, global search, project and skill filters, and a contact form that emails you.
+Next.js 15 (App Router) + TypeScript. A cinematic, single-page portfolio with persistent dark/light themes, global search, project filters, and a contact form that emails you.
 
 ## Run locally
 ```bash
@@ -19,10 +19,6 @@ npm run dev                  # http://localhost:3000
    - `RESEND_FROM_EMAIL` = `Portfolio <onboarding@resend.dev>` for the Resend test sender, or a sender address on a domain verified with Resend
 5. Redeploy. Replies go to the visitor because their email is set as Reply-To.
 
-The chat works without an AI key and displays a fallback for free-form questions. To enable
-fact-grounded answers, add `OPENAI_API_KEY` as a server-only environment variable (never prefix it
-with `NEXT_PUBLIC_`). Optionally set `OPENAI_MODEL`; the default is `gpt-4o-mini`.
-
 ## Deploy
 Push to GitHub → import the repo on Vercel → add the two variables → Deploy.
 
@@ -34,8 +30,13 @@ Push to GitHub → import the repo on Vercel → add the two variables → Deplo
 | Skills | `data/skills.ts` |
 | Education, internship, certifications | `data/experience.ts` |
 | Profile photo | `public/images/profile.jpg` |
+| Optional hero cutout | `public/images/hero-cutout.png` (transparent PNG, about 900×1100 px) |
+| Optional ID-card portrait | `public/images/id-card.jpg` (portrait JPG, about 700×900 px) |
+| Optional social preview | `public/images/og.png` (1200×630 px) |
 | Project cover images | `public/images/projects/` (replace with real screenshots, same file names) |
 | Resume | `public/resume.pdf` |
 | Memoji expressions | `public/images/memoji/default.png`, `thinking.png`, `projects.png`, `skills.png`, `fun.png`, `contact.png` |
 | Postcard photos | Add images under `public/images/postcards/` and set their paths in `data/postcards.ts` |
-| Days journal entries | `data/days.ts` |
+
+The hero, ID card, and social preview images are optional. The portfolio falls back to the profile
+photo and omits the social image when those files are not present.

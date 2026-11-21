@@ -21,14 +21,12 @@ type Item = {
 
 function buildItems(): Item[] {
   const items: Item[] = [
-    { id: "p-home", emoji: "⌂", title: "Home", hint: "Chat with me", group: "Page", href: "/", keywords: "me about intro chat fun" },
-    { id: "p-projects", emoji: "🚀", title: "Projects", hint: "Everything I have built", group: "Page", href: "/projects", keywords: "work portfolio" },
-    { id: "p-skills", emoji: "🛠️", title: "Skills", hint: "Languages, AI/ML, data and tools", group: "Page", href: "/skills", keywords: "technologies stack" },
-    { id: "p-about", emoji: "◉", title: "About", hint: "Education, experience and certifications", group: "Page", href: "/about", keywords: "experience education internship certifications" },
-    { id: "p-postcards", emoji: "▣", title: "Postcards", hint: "Photo albums and moments", group: "Page", href: "/postcards", keywords: "photos gallery albums" },
-    { id: "p-days", emoji: "◷", title: "Days", hint: "Journal notes and milestones", group: "Page", href: "/days", keywords: "journal timeline updates" },
-    { id: "p-contact", emoji: "✉️", title: "Contact", hint: "Send me a message", group: "Page", href: "/contact", keywords: "email hire form message reach" },
-    { id: "p-fun", emoji: "✧", title: "Fun", hint: "Personal interests", group: "Page", href: "/", keywords: "hobbies interests" },
+    { id: "p-home", emoji: "⌂", title: "Home", hint: "Welcome to my digital archive", group: "Page", href: "/#home", keywords: "me intro" },
+    { id: "p-projects", emoji: "↗", title: "Projects", hint: "AI, data, and full-stack work", group: "Page", href: "/#projects", keywords: "work portfolio" },
+    { id: "p-skills", emoji: "◈", title: "Skills", hint: "Languages, AI/ML, data and tools", group: "Page", href: "/#skills", keywords: "technologies stack" },
+    { id: "p-about", emoji: "◉", title: "About", hint: "Background, experience and education", group: "Page", href: "/#about", keywords: "experience education internship certifications" },
+    { id: "p-postcards", emoji: "▣", title: "Postcards", hint: "Photo albums and moments", group: "Page", href: "/#postcards", keywords: "photos gallery albums" },
+    { id: "p-contact", emoji: "✉️", title: "Contact", hint: "Send me a message", group: "Page", href: "/#contact", keywords: "email hire form message reach" },
     { id: "l-resume", emoji: "📄", title: "Resume", hint: "Open the PDF", group: "Link", href: site.resume, external: true, keywords: "cv download" },
     { id: "l-github", emoji: "🐙", title: "GitHub", hint: "github.com/Sashank096", group: "Link", href: site.github, external: true, keywords: "code repositories" },
     { id: "l-linkedin", emoji: "💼", title: "LinkedIn", hint: "Connect with me", group: "Link", href: site.linkedin, external: true, keywords: "network" },
@@ -42,7 +40,7 @@ function buildItems(): Item[] {
       title: p.title,
       hint: p.description,
       group: "Project",
-      href: `/projects#${p.id}`,
+      href: `/#${p.id}`,
       projectId: p.id,
       keywords: `${p.tags.join(" ")} ${p.category}`,
     }),
@@ -52,7 +50,7 @@ function buildItems(): Item[] {
     g.items.forEach((s) => {
       if (seen.has(s)) return;
       seen.add(s);
-      items.push({ id: `s-${s}`, emoji: "◈", title: s, hint: `Skill in ${g.title}`, group: "Skill", href: "/skills" });
+      items.push({ id: `s-${s}`, emoji: "◈", title: s, hint: `Skill in ${g.title}`, group: "Skill", href: "/#skills" });
     }),
   );
   return items;
@@ -137,9 +135,6 @@ export default function SearchPalette() {
       return;
     }
     router.push(item.href);
-    if (item.id === "p-fun") {
-      window.setTimeout(() => window.dispatchEvent(new CustomEvent("chat-topic", { detail: "fun" })), 160);
-    }
   }
 
   function onInputKey(e: React.KeyboardEvent<HTMLInputElement>) {
